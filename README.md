@@ -1,50 +1,32 @@
-# Heart Disease Risk Prediction
+# Deploying a Pre-Trained Machine Learning Model using FastAPI and Docker
 
 ## Objective
 
-The objective of this project is to develop a machine learning classification
-system that predicts heart disease risk.
-
-The model predicts:
-
-- 0 → Low/No Risk
-- 1 → High Risk
-
-## Dataset
-
-The project uses the UCI Heart Disease dataset.
-
-The dataset contains patient-related medical features such as age, sex,
-chest pain type, blood pressure, cholesterol and other clinical attributes.
+The objective of this project is to deploy a pre-trained Scikit-learn machine learning model as a REST API using FastAPI and containerize the application using Docker.
 
 ## Technologies Used
 
 - Python
-- Pandas
-- NumPy
 - Scikit-learn
-- Matplotlib
-- Seaborn
+- Joblib
+- FastAPI
+- Uvicorn
+- Docker
+- REST API
+- cURL / Postman
 
 ## Machine Learning Model
 
-Logistic Regression is used for binary classification.
+The Iris dataset provided by Scikit-learn is used for this project.
 
-## Project Workflow
+The model uses:
+
+- StandardScaler for preprocessing
+- Logistic Regression for classification
+
+The trained model achieved an accuracy of approximately 93.33%.
+
+The trained model is saved as:
 
 ```text
-Dataset
-   ↓
-Data Loading
-   ↓
-Data Preprocessing
-   ↓
-Train-Test Split
-   ↓
-Logistic Regression
-   ↓
-Prediction
-   ↓
-Model Evaluation
-   ↓
-Confusion Matrix
+models/model.pkl
